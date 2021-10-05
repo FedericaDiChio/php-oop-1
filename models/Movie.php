@@ -46,9 +46,5 @@ making him ultimately take on the persona he is more known as...Joker.",
 'Todd Phillips', 'english');
 // var_dump($movie2);
 
-
-// Riprendiamo il metodo 
-// $movie1->getTitle();
-
 ?>
 
