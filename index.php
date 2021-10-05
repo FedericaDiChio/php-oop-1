@@ -8,7 +8,7 @@ class Movie {
     public $language; 
     public $country;
 
-// costruttore 
+// Costruttore 
 
 public function __construct($_title, $_genre, $_plot, $_director, $_language = 'unknown', $_country = 'unknown') {
     $this->title = $_title;
@@ -17,7 +17,13 @@ public function __construct($_title, $_genre, $_plot, $_director, $_language = '
     $this->director = $_director;
     $this->language = $_language;
     $this->country = $_country;
-}
+    }
+
+// Metodo     
+public function getTitle()
+{
+    echo "Il titolo del film della prima istanza è $this->title";
+}    
 };
 
 
@@ -30,6 +36,7 @@ to go where no man has gone before, a planet that may have the right environment
 'Christopher Nolan');
 var_dump($movie1);
 
+
 // Istanza 2
 $movie2 = new Movie("Joker", "drama", 
 "Arthur Fleck works as a clown and is an aspiring stand-up comic. He has mental health issues, 
@@ -38,3 +45,7 @@ Arthur has an even worse time than most. Over time these issues bear down on him
 making him ultimately take on the persona he is more known as...Joker.", 
 'Todd Phillips', 'english');
 var_dump($movie2);
+
+
+// Riprendiamo il metodo 
+$movie1->getTitle();
