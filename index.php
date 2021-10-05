@@ -1,51 +1,31 @@
 <?php 
+require_once __DIR__ . '/models/Movie.php';
+?>
 
-class Movie {
-    public $director;
-    public $title;
-    public $genre;
-    public $plot;
-    public $language; 
-    public $country;
-
-// Costruttore 
-
-public function __construct($_title, $_genre, $_plot, $_director, $_language = 'unknown', $_country = 'unknown') {
-    $this->title = $_title;
-    $this->genre = $_genre;
-    $this->plot = $_plot;
-    $this->director = $_director;
-    $this->language = $_language;
-    $this->country = $_country;
-    }
-
-// Metodo     
-public function getTitle()
-{
-    echo "Il titolo del film della prima istanza è $this->title";
-}    
-};
-
-
-// Istanza 1
-$movie1 = new Movie ('Interstellar', 'sci-fi', 
-"Earth's future has been riddled by disasters, famines, and droughts. 
-There is only one way to ensure mankind's survival: Interstellar travel. 
-A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts 
-to go where no man has gone before, a planet that may have the right environment to sustain human life.",
-'Christopher Nolan');
-var_dump($movie1);
-
-
-// Istanza 2
-$movie2 = new Movie("Joker", "drama", 
-"Arthur Fleck works as a clown and is an aspiring stand-up comic. He has mental health issues, 
-part of which involves uncontrollable laughter. Times are tough and, due to his issues and occupation, 
-Arthur has an even worse time than most. Over time these issues bear down on him, shaping his actions, 
-making him ultimately take on the persona he is more known as...Joker.", 
-'Todd Phillips', 'english');
-var_dump($movie2);
-
-
-// Riprendiamo il metodo 
-$movie1->getTitle();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- istanza 1  -->
+    <section>
+        <h1><?php $movie1->getTitle() ?></h1>
+        <address><?= '<strong>Director: </strong>' . $movie1->director ?></address>
+        <p><?= '<strong>Plot: </strong>' . $movie1->plot ?></p>
+        <p><?= '<strong>Language: </strong>' . $movie1->language ?></p>
+        <?= '<strong>Country: </strong>' . $movie1->country ?>
+    </section>
+    <!-- Istanza 2  -->
+    <section>
+    <h1><?php $movie1->getTitle() ?></h1>
+        <address><?= '<strong>Director: </strong>' . $movie2->director ?></address>
+        <p><?= '<strong>Plot: </strong>' . $movie2->plot ?></p>
+        <p><?= '<strong>Language: </strong>' . $movie2->language ?></p>
+        <?= '<strong>Country: </strong>' . $movie2->country ?>
+    </section>
+</body>
+</html>
