@@ -21,7 +21,7 @@ require_once __DIR__ . '/models/Movie.php';
     </section>
     <!-- Istanza 2  -->
     <section>
-    <h1><?php $movie1->getTitle() ?></h1>
+    <h1><?php $movie2->getTitle() ?></h1>
         <address><?= '<strong>Director: </strong>' . $movie2->director ?></address>
         <p><?= '<strong>Plot: </strong>' . $movie2->plot ?></p>
         <p><?= '<strong>Language: </strong>' . $movie2->language ?></p>
